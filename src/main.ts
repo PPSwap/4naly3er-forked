@@ -31,6 +31,7 @@ const main = async (
   let result = '# Report\n\n';
   let fileNames: string[] = [];
 
+  // generates an array of file names based on a specified scope or by recursively exploring a directory
   if (!!scopeFile || !!scope) {
     // Scope is specified in a .txt file or is passed in a string
     const content = scope ?? fs.readFileSync(scopeFile as string, { encoding: 'utf8', flag: 'r' });
@@ -55,6 +56,7 @@ const main = async (
   // });
 
   // Read file contents and build AST
+  // reads the contents of multiple files and generates an array of objects that include the file name, content, and abstract syntax tree (AST)
   const files: InputType = [];
   const asts = await compileAndBuildAST(basePath, fileNames);
   fileNames.forEach((fileName, index) => {
@@ -65,6 +67,7 @@ const main = async (
     });
   });
 
+  // analyze the files and issues in the files and report any issues found
   for (const t of Object.values(IssueTypes)) {
     result += analyze(
       files,

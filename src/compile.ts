@@ -94,6 +94,12 @@ const findImports = (basePath: string) => {
   return res;
 };
 
+/**
+ * Compiles and builds the Abstract Syntax Tree (AST) for Solidity source code files.
+ * @param basePath - The base path of the source code files.
+ * @param fileNames - An array of file names to be compiled.
+ * @returns An array of ASTs for the compiled source code files.
+ */
 const compileAndBuildAST = async (basePath: string, fileNames: string[]): Promise<SourceUnit[]> => {
   let sources: Sources = [];
 

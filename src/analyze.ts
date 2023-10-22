@@ -13,6 +13,13 @@ const issueTypesTitles = {
  * @notice Runs the given issues on files and generate the report markdown string
  * @param githubLink optional url to generate links
  */
+/**
+ * Analyzes the given files for the specified issues and returns a formatted string with the results.
+ * @param files An array of InputType objects representing the files to analyze.
+ * @param issues An array of Issue objects representing the issues to search for.
+ * @param githubLink An optional string representing the GitHub link to the repository being analyzed.
+ * @returns A string containing the formatted results of the analysis.
+ */
 const analyze = (files: InputType, issues: Issue[], githubLink?: string): string => {
   let result = '';
   let analyze: { issue: Issue; instances: Instance[] }[] = [];

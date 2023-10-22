@@ -45,6 +45,7 @@ export async function sh(cmd: string) {
  * @notice Returns all file contained in a folder
  * @dev Works with a queue, could be done with a recursive function
  */
+// generates an array of file names by recursively exploring a directory and its subdirectories
 export const recursiveExploration = (basePath: string, extension = '.sol'): string[] => {
   let fileNames = [];
   let directoryQueue = [''];
