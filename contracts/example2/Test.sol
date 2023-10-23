@@ -7,6 +7,10 @@ contract Test {
         return 123;
     }
 
+    function testAst() external view {
+        uint balance = address(this).balance;
+    }
+
     modifier initializer() {
         _;
     }
