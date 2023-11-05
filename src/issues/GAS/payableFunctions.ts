@@ -7,6 +7,7 @@ const issue: RegexIssue = {
   description:
     'If a function modifier such as `onlyOwner` is used, the function will revert if a normal user tries to pay the function. Marking the function as `payable` will lower the gas cost for legitimate callers because the compiler will not include checks for whether a payment was provided.',
   regex: /function((?!payable).)*only/g,
+  // function doSomething() onlyOwner
 };
 
 export default issue;

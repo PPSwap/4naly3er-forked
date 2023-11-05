@@ -5,6 +5,9 @@ const issue: RegexIssue = {
   type: IssueTypes.GAS,
   title: 'Use shift Right/Left instead of division/multiplication if possible',
   regex: /\n[^\/\n]*\/[^\/]?[248]+/g,
+  // someNumber / 2
+  // someNumber / 4
+  // someNumber / 8
   startLineModifier: 1,
 };
 

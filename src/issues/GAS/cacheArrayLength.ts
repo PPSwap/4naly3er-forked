@@ -7,6 +7,7 @@ const issue: RegexIssue = {
   description:
     'If not cached, the solidity compiler will always read the length of the array during each iteration. That is, if it is a storage array, this is an extra sload operation (100 additional extra gas for each iteration except for the first) and if it is a memory array, this is an extra mload operation (3 additional gas for each iteration except for the first).',
   regex: /for?.(.*\.length)/g,
+  // for (uint256 i = 0; i < myArray.length; i++)
 };
 
 export default issue;
