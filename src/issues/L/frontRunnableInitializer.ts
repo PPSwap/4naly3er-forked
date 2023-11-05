@@ -4,8 +4,11 @@ const issue: RegexIssue = {
   regexOrAST: 'Regex',
   type: IssueTypes.L,
   title: 'Initializers could be front-run',
-  description: "Initializers could be front-run, allowing an attacker to either set their own values, take ownership of the contract, and in the best case forcing a re-deployment",
+  description:'Initializers could be front-run, allowing an attacker to either set their own values, take ownership of the contract, and in the best case forcing a re-deployment',
   regex: /initialize\(|init\(|(initializer)/g,
+  // initialize();
+  // init();
+  // initializer();
 };
 
 export default issue;

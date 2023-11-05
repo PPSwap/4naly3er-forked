@@ -5,6 +5,8 @@ const issue: RegexIssue = {
   type: IssueTypes.L,
   title: 'Do not use deprecated library functions',
   regex: /_setupRole\(|safeApprove\(/g,
+  // _setupRole(DEFAULT_ADMIN_ROLE, adminAddress);
+  // safeApprove(tokenAddress, spenderAddress, allowanceAmount);
 };
 
 export default issue;

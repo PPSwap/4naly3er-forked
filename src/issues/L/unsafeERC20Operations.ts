@@ -5,6 +5,9 @@ const issue: RegexIssue = {
   type: IssueTypes.L,
   title: 'Unsafe ERC20 operation(s)',
   regex: /\.transfer\(|\.transferFrom\(|\.approve\(/g,
+  // token.transfer(receiver, amount);
+  // token.transferFrom(sender, receiver, amount);
+  // token.approve(spender, allowance);
 };
 
 export default issue;
