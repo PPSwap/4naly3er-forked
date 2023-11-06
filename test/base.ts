@@ -73,8 +73,10 @@ const main = async (
   }
 
   if (result.indexOf(issueTitle) !== -1) {
-    console.log('The issue was found');
+    console.log('✅ Test Passed!! The issue was found');
     console.log('Issue Title: ', issueTitle);
+  } else {
+    console.log('❌ Test Failed!! The issue was not found');
   }
 
   fs.writeFileSync(out, result);
