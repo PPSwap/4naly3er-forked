@@ -11,6 +11,11 @@ const issue: RegexIssue = {
     + '`@dev Note that none of the functions in this library check that a token has code at all! That responsibility is delegated to the caller` \n',
   regexPreCondition: /solmate\/utils\/SafeTransferLib.sol/g,
   regex: /.safeTransfer\(|\.safeTransferFrom\(|\.safeApprove\(/g,
+  // solmate\utils\SafeTransferLib.sol should present
+  // safeTransfer()
+  // safeTransferFrom()
+  // safeApprove()
+
 };
 
 export default issue;
