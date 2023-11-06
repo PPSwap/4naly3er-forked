@@ -14,8 +14,8 @@ import { recursiveExploration } from './../src/utils';
  */
 const main = async (
   issueTitle: string,
-  basePath: string = 'test/contracts/',
   scopeFile: string | null = null,
+  basePath: string = 'test/contracts/',
   githubLink: string | null = null,
   out: string = 'report.md',
   scope?: string,
@@ -23,20 +23,24 @@ const main = async (
   let result = '';
   let fileNames: string[] = [];
 
-  // generates an array of file names based on a specified scope or by recursively exploring a directory
-  if (!!scopeFile || !!scope) {
-    // Scope is specified in a .txt file or is passed in a string
-    const content = scope ?? fs.readFileSync(scopeFile as string, { encoding: 'utf8', flag: 'r' });
-    for (const word of [...content.matchAll(/[a-zA-Z\/\.\-\_0-9]+/g)].map(r => r[0])) {
-      if (word.endsWith('.sol') && fs.existsSync(`${basePath}${word}`)) {
-        fileNames.push(word);
-      }
-    }
-    if (fileNames.length === 0) throw Error('Scope is empty');
-  } else {
-    // Scope is not specified: exploration of the folder
-    fileNames = recursiveExploration(basePath);
+  if (!!scopeFile) {
+    fileNames.push(scopeFile)
   }
+
+  // generates an array of file names based on a specified scope or by recursively exploring a directory
+  // if (!!scopeFile || !!scope) {
+  //   // Scope is specified in a .txt file or is passed in a string
+  //   const content = scope ?? fs.readFileSync(scopeFile as string, { encoding: 'utf8', flag: 'r' });
+  //   for (const word of [...content.matchAll(/[a-zA-Z\/\.\-\_0-9]+/g)].map(r => r[0])) {
+  //     if (word.endsWith('.sol') && fs.existsSync(`${basePath}${word}`)) {
+  //       fileNames.push(word);
+  //     }
+  //   }
+  //   if (fileNames.length === 0) throw Error('Scope is empty');
+  // } else {
+  //   // Scope is not specified: exploration of the folder
+  //   fileNames = recursiveExploration(basePath);
+  // }
 
   console.log('Scope: ', fileNames);
 

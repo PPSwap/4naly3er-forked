@@ -7,7 +7,8 @@
   "license": "Unlicensed",
   "private": true,
   "scripts": {
-    "analyze": "ts-node src/index.ts"
+    "analyze": "ts-node src/index.ts",
+    "test": "ts-node"
   },
   "dependencies": {
     "@types/node": "^7.0.5",
