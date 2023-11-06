@@ -20,10 +20,6 @@ type Sources = { file: string; index: number; content: string; version: string; 
 const compile = async (version: string, toCompile: ToCompile, basePath: string) => {
   const solc = require(`solc-${version}`);
 
-  console.log("-----------solc", solc);
-  console.log('-----------toCompile', toCompile);
-  
-
   // version() returns something like '0.8.13+commit.abaa5c0e.Emscripten.clang'
   const [trueVersion] = solc.version().split('+');
 
@@ -46,8 +42,6 @@ const compile = async (version: string, toCompile: ToCompile, basePath: string) 
       ),
     );
   }
-
-  console.log("-----------output", output);
 
   return output;
 };
