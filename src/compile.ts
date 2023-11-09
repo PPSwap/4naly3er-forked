@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import semver from 'semver';
 import type { SourceUnit } from 'solidity-ast';
-import { recursiveExploration } from './utils';
 
 const versions = Object.keys(require('../package.json').dependencies)
   .filter(s => s.startsWith('solc-'))
@@ -106,7 +105,7 @@ const compileAndBuildAST = async (basePath: string, fileNames: string[]): Promis
   /** Read scope and fill file list */
   let i = 0;
   for (const file of fileNames) {
-    const content = await fs.readFileSync(path.join(basePath, file), { encoding: 'utf8', flag: 'r' });
+    const content = fs.readFileSync(path.join(basePath, file), { encoding: 'utf8', flag: 'r' });
     if (!!content) {
       if (!content.match(/pragma solidity (.*);/)) {
         console.log(`Cannot find pragma in ${path.join(basePath, file)}`);
