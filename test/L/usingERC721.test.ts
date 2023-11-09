@@ -1,4 +1,4 @@
-import main from './base';
+import main from '../base';
 
 main('Consider using ERC721A instead of ERC721', 'usingERC721.sol');
 

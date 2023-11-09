@@ -1,3 +1,3 @@
-import main from './base';
+import main from '../base';
 
 main('Use `selfbalance()` instead of `address(this).balance`', 'addressBalance.sol');
