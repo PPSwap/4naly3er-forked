@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "analyze": "ts-node src/index.ts",
-    "test": "ts-node"
+    "test": "ts-node",
+    "ast": "ts-node generateAST.ts"
   },
   "dependencies": {
     "@types/node": "^7.0.5",
