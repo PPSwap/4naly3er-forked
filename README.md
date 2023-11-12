@@ -10,7 +10,7 @@ Additionally, gradually we will add more issues.
 
 ```bash
 # analyze contracts
-yarn analyze <BASE_PATH> <SCOPE_FILE> <GITHUB_URL>
+yarn analyze <BASE_PATH> <SCOPE_FILE> <GITHUB_URL>  Now I am checking the conflick in remote locaiton.
 # Example
 yarn analyze contracts scope.example.txt
 
@@ -41,3 +41,5 @@ You're all set!
 ## Contributing
 
 You're more than welcome to contribute! For help you can check [CONTRIBUTING.md](CONTRIBUTING.md)
+
+ 
