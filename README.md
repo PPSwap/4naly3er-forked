@@ -1,27 +1,23 @@
-```
-     .---. ,--.  ,--   ,----.   ,--.  ,--.   ,-. .----. ,------.,------,
-    / .  | |   \ |  | |  ._. \  |  |  `\ . '.' /\_.-,  ||  .---'|   /`. '
-   / /|  | |  . '|  | |  |_|  | |  |    \     /   |_  <(|  '--. |  |_.' |
-  / '-'  |||  |\    | |  .-.  |(|  '_    /   /) .-. \  ||  .--' |  .   .'
-  `---|  |'|  | \   | |  | |  | |     | /   /`  \ `-'  /|  `---.|  |\  \
-      `--' `--'  `--' `--' `--' `-----' `--'     `---'' `------'`--' '--'
-```
+# 4naly3er
+This repository is a fork of https://github.com/Picodes/4naly3er.
 
-# Table of Contents
+The original repository doesn't contains unit test for the issues. So, we are adding source solidity file and test files to test the issues.
 
-- [Table of Contents](#table-of-contents)
-  - [Usage](#usage)
-  - [Example Reports](#example-reports)
-  - [Installation](#installation)
-  - [Contributing](#contributing)
+Additionally, gradually we will add more issues.
+
 
 ## Usage
 
 ```bash
+# analyze contracts
 yarn analyze <BASE_PATH> <SCOPE_FILE> <GITHUB_URL>
-
 # Example
 yarn analyze contracts scope.example.txt
+
+# test an issue
+yarn test test/GAS/addressBalance.test.ts
+# generate ast of a solidity file
+yarn ast test/contracts/addressBalance.sol
 ```
 
 - `BASE_PATH` is a relative path to the folder containing the smart contracts.
@@ -30,15 +26,7 @@ yarn analyze contracts scope.example.txt
 - For remappings, add `remappings.txt` to `BASE_PATH`.
 - The output will be saved in a `report.md` file.
 
-## Example Reports
 
-| Repository                                                                        | Report                                                                     |
-| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [Holograph](https://code4rena.com/contests/2022-10-holograph-contest)             | [Report](https://gist.github.com/Picodes/e9f1bb87ae832695694175abd8f9797f) |
-| [3xcalibur](https://code4rena.com/contests/2022-10-3xcalibur-contest)             | [Report](https://gist.github.com/Picodes/51789d48e3a3c9246a48bb490d688343) |
-| [Inverse Finance](https://code4rena.com/contests/2022-10-inverse-finance-contest) | [Report](https://gist.github.com/Picodes/8d3a45d6d1362fb9953d631d8c84a29f) |
-| [Paladin](https://code4rena.com/contests/2022-10-paladin-warden-pledges-contest)  | [Report](https://gist.github.com/Picodes/2d23ed5128036f1b475654d5bcca9eed) |
-| [zkSync](https://code4rena.com/contests/2022-10-inverse-finance-contest)          | [Report](https://gist.github.com/Picodes/1f87a82e954cc749dea9d9961d5f4dff) |
 
 ## Installation
 
