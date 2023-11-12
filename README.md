@@ -10,7 +10,7 @@ Additionally, gradually we will add more issues.
 
 ```bash
 # analyze contracts
-yarn analyze <BASE_PATH> <SCOPE_FILE> <GITHUB_URL>
+yarn analyze <BASE_PATH> <SCOPE_FILE> <GITHUB_URL> CHANGE123
 # Example
 yarn analyze contracts scope.example.txt
 
