@@ -12,10 +12,13 @@
     "ast": "ts-node generateAST.ts"
   },
   "dependencies": {
+    "@chainlink/contracts": "^0.8.0",
+    "@openzeppelin/contracts": "^5.0.0",
     "@types/node": "^7.0.5",
     "@types/semver": "^7.3.13",
     "@typescript-eslint/eslint-plugin": "4.28.4",
     "@typescript-eslint/parser": "4.28.4",
+    "commander": "^11.0.0",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "16.0.3",
@@ -23,7 +26,6 @@
     "eslint-plugin-mocha": "^10.0.3",
     "eslint-plugin-mocha-no-only": "1.1.1",
     "eslint-plugin-node": "11.1.0",
-    "commander": "^11.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
