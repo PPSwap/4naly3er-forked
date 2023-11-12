@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 contract Test {
-    uint[] arr = [1, 2, 3];
+    uint[] public arr = [1, 2, 3];
 
     function fun() public {
         arr[0] += 5;
