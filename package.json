@@ -68,6 +68,7 @@
     "typescript": "^4.7.4"
   },
   "devDependencies": {
-    "solady": "^0.0.140"
+    "solady": "^0.0.140",
+    "solmate": "^6.2.0"
   }
 }

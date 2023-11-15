@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "solmate/src/utils/SafeTransferLib.sol";
+import "solmate/utils/SafeTransferLib.sol";
 
 contract MyContract {
     using SafeTransferLib for IERC20;
