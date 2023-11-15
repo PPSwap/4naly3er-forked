@@ -1994,6 +1994,11 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
+solady@^0.0.140:
+  version "0.0.140"
+  resolved "https://registry.yarnpkg.com/solady/-/solady-0.0.140.tgz#7a2041749dc91fec098413a9ff366c9174971d05"
+  integrity sha512-hIvS/HprLzI95r3+5E++yFIIOsFnXG2myXqAW7pBpLzo5UnM2MXXtklurohY4SY6BbVh6r7oGnJAVO94XVNWyA==
+
 "solc-0.6.10@npm:solc@0.6.10":
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/solc/-/solc-0.6.10.tgz#6e45b4f7013c7098fc1e31f7d86ce949e8c49e18"
