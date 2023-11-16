@@ -5,3 +5,4 @@ scope.txt
 repos
 reports
 ast.json
+parser-ast.json
