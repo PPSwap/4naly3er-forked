@@ -3,7 +3,7 @@ const fs = require('fs');
 const { findAll } = require('solidity-ast/utils');
 
 let filePath = process.argv.slice(2)[0];
-filePath = filePath || 'contracts/example2/Test.sol';
+filePath = filePath || 'contracts/example/Test.sol';
 const data = fs.readFileSync(filePath, 'utf8');
 // console.log(data);
 
