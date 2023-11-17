@@ -1,4 +1,4 @@
 import main from '../base';
 
 // not working
-main('Non-reentrant functions should be marked as `nonReentrant`', 'nonReentrantBeforeModifiers.sol');
+main('The `nonReentrant` `modifier` should occur before all other modifiers', 'nonReentrantBeforeModifiers.sol');
