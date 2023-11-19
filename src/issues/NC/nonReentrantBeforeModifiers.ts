@@ -10,6 +10,8 @@ const issue: RegexIssue = {
   // match function declarations that don't have certain modifiers (external, override, view, pure, internal, private) and include at least one additional non-reentrant modifier.
 
   // function anotherFunction() internal override view nonReentrant
+
+  // regex isn't correct
 };
 
 export default issue;

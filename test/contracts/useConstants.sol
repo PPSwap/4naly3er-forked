@@ -9,7 +9,7 @@ contract MagicNumberExample {
 
         // Another magic number
         result = result + 775;
-        uint x= 4555151515 * 5454545;
+        uint x = 4555151515 * 5454545;
         return result;
     }
 }

@@ -24,9 +24,19 @@ contract ReentrancyExample {
         owner = msg.sender;
     }
 
-    // Function using both modifiers
-    function doSomething() internal onlyOwner nonReentrant {
-        // Perform some action
-        // ...
+    function doSomething1(uint abc, address _add) external onlyOwner nonReentrant {
+        // should match
+    }
+
+    function doSomething2() external nonReentrant onlyOwner {
+        // shouldn't match
+    }
+
+    function doSomething3() public onlyOwner nonReentrant {
+        // should match
+    }
+
+    function doSomething4() public nonReentrant {
+        // shouldn't match
     }
 }
