@@ -17,8 +17,8 @@ const issue: ASTIssue = {
           if (node.typeDescriptions.typeString === 'address' && node.kind === 'typeConversion') {
             for (const arg of findAll('FunctionCall', node)) {
               if (arg.kind === 'typeConversion') {
-                let typeString = arg.typeDescriptions.typeString;
-                let uintPattern = /^uint\d+$/;
+                const typeString = arg.typeDescriptions.typeString;
+                const uintPattern = /^uint([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$/;
 
                 if (!!typeString && uintPattern.test(typeString)) {
                   instances.push(instanceFromSRC(file, node.src));
