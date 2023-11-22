@@ -15,7 +15,6 @@ const issue: ASTIssue = {
       if (!!file.ast) {
         for (const node of findAll('MemberAccess', file.ast)) {
           // Look for Address(X).balance
-          console.log(node);
           if (
             node.nodeType === 'MemberAccess' &&
             node.memberName === 'balance' &&
