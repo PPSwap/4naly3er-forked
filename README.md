@@ -35,6 +35,11 @@ You'll need [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/). The
 ```bash
 yarn
 ```
+If you want to run the test files directly from vscode button click, then install `ts-node` globally.
+
+```bash
+npm install -g ts-node
+```
 
 You're all set!
 
