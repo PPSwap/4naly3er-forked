@@ -3,10 +3,10 @@ import { IssueTypes, RegexIssue } from '../../types';
 const issue: RegexIssue = {
   regexOrAST: 'Regex',
   type: IssueTypes.NC,
-  title: 'Import declarations should import specific identifiers, rather than the whole file',
+  title: 'Large number literals texts should use underscore',
   description:
-    'Import declarations for the whole file usually imports a lot of unnecessary variables and funciton, intesd we need to use specific variable or funciton using the import statement.',
-  regex: /import...[^\{]/gm,
+    ' Large number literals texts should use underscore. It is good for readability and underscores are ignored by the compiler',
+  regex: /[0-9]{12,}/gm,
 };
 
 export default issue;
