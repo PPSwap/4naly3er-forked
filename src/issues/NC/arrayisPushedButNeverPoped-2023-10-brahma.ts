@@ -17,6 +17,8 @@ const issue: ASTIssue = {
             instances.push(instanceFromSRC(file, node.src));
             console.log(node);
             console.log(node.expression);
+            console.log(node.expression.id);
+            console.log(node.expression.nodeType);
           }
         }
       }
